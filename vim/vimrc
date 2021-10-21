@@ -1,0 +1,3 @@
+" sets line numbers
+set relativenumber number
+highlight LineNr ctermfg=grey
