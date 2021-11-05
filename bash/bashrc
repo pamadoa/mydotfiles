@@ -1,2 +1,6 @@
 #------------------------Prompt colors------------- ----- #
 PS1="\n\[\e[38;5;125m\]\u\[\e[0;33m\] at \[\e[38;5;63m\]\h\[\e[0;33m\]:\[\e[38;5;80m\]\w\[\e[0;37m\]\n \[\e[0;33m\]$ \[\e[0;00m\]"
+
+
+export PATH="~/resource-utils/bin:$PATH
+export LC_ALL='en_US.UTF-8'"
