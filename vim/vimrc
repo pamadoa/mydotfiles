@@ -1,0 +1,81 @@
+set number
+set mouse=a
+syntax enable
+set showcmd
+set encoding=utf-8
+set showmatch
+set relativenumber
+set sw=2
+
+call plug#begin('~/.vim/plugged')
+
+" TEMA GRUVBOX
+Plug 'morhetz/gruvbox'
+
+" LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'anott03/nvim-lspinstall'
+Plug 'nvim-lua/completion-nvim'
+Plug 'ntpeters/vim-better-whitespace'
+"Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'gaalcaras/ncm-R'
+Plug 'preservim/nerdtree'
+Plug 'Raimondi/delimitMate'
+Plug 'patstockwell/vim-monokai-tasty'
+Plug 'itchyny/lightline.vim'
+" Con este plug puedes utilizar markdown dentro de nvim
+Plug 'plasticboy/vim-markdown'
+
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'jalvesaq/Nvim-R'
+Plug 'gaalcaras/ncm-R'
+
+" Vim 8 only
+if !has('nvim')
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+"Lineas por código
+Plug 'Yggdroot/indentLine'
+
+Plug 'vim-airline/vim-airline'
+
+"Plug 'scrooloose/nerdtree'
+
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jalvesaq/Nvim-R'
+Plug 'roxma/nvim-yarp'
+Plug 'gaalcaras/ncm-R'
+Plug 'Raimondi/delimitMate'
+Plug 'itchyny/lightline.vim'
+call plug#end()
+
+"Tema color
+set background=dark
+"let g:gruvbox_material_background='soft'
+colorscheme gruvbox
+
+"LSP autocompletado rstudio
+lua << EOF
+require'lspconfig'.r_language_server.setup{on_attach=require'completion'.on_attach}
+EOF
+
+"configuracion airline
+let g:airline#extensions#tabline#enabled = 1
+
+" NERD Tree
+map <leader>nn :NERDTreeToggle<CR>                  " Toggle NERD tree.
+
+" NCM2
+autocmd BufEnter * call ncm2#enable_for_buffer()    " To enable ncm2 for all buffers.
+set completeopt=noinsert,menuone,noselect           " :help Ncm2PopupOpen for more
+" information.
+
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=1
+let g:better_whitespace_ctermcolor='yellow'
