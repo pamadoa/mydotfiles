@@ -1,6 +1,12 @@
-#------------------------Prompt colors------------- ----- #
+#--------------------Prompt colors------------- ----- #
 PS1="\n\[\e[38;5;125m\]\u\[\e[0;33m\] at \[\e[38;5;63m\]\h\[\e[0;33m\]:\[\e[38;5;80m\]\w\[\e[0;37m\]\n \[\e[0;33m\]$ \[\e[0;00m\]"
 
 
-export PATH="~/resource-utils/bin:$PATH
-export LC_ALL='en_US.UTF-8'"
+export PATH="~/resource-utils/bin:$PATH"
+export LC_ALL='en_US.UTF-8'
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
