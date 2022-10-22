@@ -75,7 +75,7 @@ map <leader>nn :NERDTreeToggle<CR>                  " Toggle NERD tree.
 autocmd BufEnter * call ncm2#enable_for_buffer()    " To enable ncm2 for all buffers.
 set completeopt=noinsert,menuone,noselect           " :help Ncm2PopupOpen for more
 " information.
-
+"hola
 "Better spaces
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
