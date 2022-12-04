@@ -34,3 +34,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 "NerdTREE 
 nnoremap <C-n> :NERDTree<CR>
+"Otros
+let g:coc_disable_startup_warning = 1
+
