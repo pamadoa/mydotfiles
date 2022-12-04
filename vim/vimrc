@@ -8,7 +8,6 @@ set relativenumber
 set sw=2
 
 call plug#begin('~/.vim/plugged')
-
 "Tema 
 Plug 'morhetz/gruvbox'
 "Status and theme (ej: normal, insert, etc.)
@@ -17,7 +16,7 @@ Plug 'vim-airline/vim-airline-themes'
 "Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 "Nvim R
-Plug 'jalvesaq/Nvim-R'
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 "NerdTREE
 Plug 'preservim/nerdtree'
 call plug#end()
