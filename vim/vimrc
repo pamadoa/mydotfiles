@@ -14,7 +14,7 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Autocomplete
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+"Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 "Nvim R
 "Plug 'jalvesaq/Nvim-R', {'branch': 'stable'} does not work in the server
 "NerdTREE
@@ -35,7 +35,7 @@ let g:airline_powerline_fonts = 1
 "NerdTREE
 nnoremap <C-n> :NERDTree<CR>
 "Otros
-let g:coc_disable_startup_warning = 1
+"let g:coc_disable_startup_warning = 1
 "Better whitespace
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
