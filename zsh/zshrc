@@ -1,0 +1,26 @@
+# ---------------------------- #
+# Author: Paula Andrea Amado
+# Maintainers:
+# Date: Dec 6, 2022
+# ---------------------------- #
+
+#------------------------Prompt Custom------------------ #
+PS1='%F{89}%n%f at %F{101}%m%f: %F{102}%~$%f '
+
+#------------------------Aliases------------------------- #
+alias gs="git status"
+alias gc="git commit -m"
+alias ll='ls -alF'                                                             
+alias la='ls -A'                                                                
+alias l='ls -CF'
+
+#-----------------------Config-------------------------- #
+set number
+set showcmd
+set encoding=utf-8
+
+#------------------------Path------------------------------#
+source $HOME/mydotfiles/shell/paths
+export LC_ALL='en_US.UTF-8'
+# Done
+# eval "$(/opt/homebrew/bin/brew shellenv)"
