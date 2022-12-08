@@ -1,3 +1,6 @@
+" --------------------------------
+" Autora: Paula Andrea Amado Amado
+" --------------------------------
 set number
 set mouse=a
 syntax enable
@@ -7,7 +10,10 @@ set showmatch
 set relativenumber
 set sw=2
 
-call plug#begin('~/.vim/plugged')
+" --------------------------------
+" Call pluggins
+" --------------------------------
+call plug#begin()
 "Tema
 Plug 'morhetz/gruvbox'
 "Status and theme (ej: normal, insert, etc.)
@@ -22,7 +28,9 @@ Plug 'preservim/nerdtree'
 Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
-"--------- -- -------- -- --------
+" --------------------------------
+" Config pluggins
+"---------------------------------
 
 "Tema color - configuracion
 set background=dark
@@ -35,7 +43,7 @@ let g:airline_powerline_fonts = 1
 "NerdTREE
 nnoremap <C-n> :NERDTree<CR>
 "Otros
-"let g:coc_disable_startup_warning = 1
+let g:coc_disable_startup_warning = 1
 "Better whitespace
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
