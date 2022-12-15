@@ -22,7 +22,7 @@ Plug 'vim-airline/vim-airline-themes'
 "Autocomplete
 "Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 "Nvim R
-Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+  Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 "NerdTREE
 Plug 'preservim/nerdtree'
 Plug 'ntpeters/vim-better-whitespace'
@@ -48,3 +48,11 @@ let g:coc_disable_startup_warning = 1
 let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=1
 let g:better_whitespace_ctermcolor='yellow'
+
+"Evitar usar el mouse
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+

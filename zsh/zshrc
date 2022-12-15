@@ -10,8 +10,8 @@ PS1='%F{#B2A4FF}%n%f at %F{#FD6F96}%m%f: %F{102}%~/%f '
 #------------------------Aliases------------------------- #
 alias gs="git status"
 alias gc="git commit -m"
-alias ll='ls -alF'                                                             
-alias la='ls -A'                                                                
+alias ll='ls -alF'
+alias la='ls -A'
 alias l='ls -CF'
 
 #-----------------------Config-------------------------- #
@@ -21,7 +21,6 @@ set encoding=utf-8
 
 #------------------------Path------------------------------#
 source $HOME/mydotfiles/shell/paths
-export PATH="~/resource-utils/bin:$PATH"
 export LC_ALL='en_US.UTF-8'
 # Done
 #eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -41,4 +40,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
+if [ -d "/usr/local/opt/ruby/bin" ]; then
+  export PATH=/usr/local/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
