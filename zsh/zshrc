@@ -5,7 +5,7 @@
 # ---------------------------- #
 
 #------------------------Prompt Custom------------------ #
-PS1='%F{#B2A4FF}%n%f at %F{#FD6F96}%m%f: %F{102}%~/%f '
+PS1='🐈‍⬛ %F{#EF476F}%n%f at 🐈‍⬛ %F{#FFD166}%m%f: 🐾%F{#F3C677}%~/%f '
 
 #------------------------Aliases------------------------- #
 alias gs="git status"
@@ -44,3 +44,17 @@ if [ -d "/usr/local/opt/ruby/bin" ]; then
   export PATH=/usr/local/opt/ruby/bin:$PATH
   export PATH=`gem environment gemdir`/bin:$PATH
 fi
+
+#To activate these completions, add the following to your .zshrc:
+
+    if type brew &>/dev/null; then
+     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+     autoload -Uz compinit
+     compinit
+    fi
+
+# Autosugestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#DOne
+

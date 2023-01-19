@@ -22,10 +22,12 @@ Plug 'vim-airline/vim-airline-themes'
 "Autocomplete
 "Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 "Nvim R
-  Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 "NerdTREE
 Plug 'preservim/nerdtree'
 Plug 'ntpeters/vim-better-whitespace'
+"Autocomplete
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 call plug#end()
 
 " --------------------------------
