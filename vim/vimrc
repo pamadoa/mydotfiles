@@ -57,6 +57,7 @@ let g:better_whitespace_ctermcolor='yellow'
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
+
 noremap <Right> <Nop>
 
 "Autocomplete - choose the sugestion"
