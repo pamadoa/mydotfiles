@@ -28,6 +28,8 @@ Plug 'preservim/nerdtree'
 Plug 'ntpeters/vim-better-whitespace'
 "Autocomplete
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'luochen1990/rainbow'
+Plug 'luochen1990/rainbow'
 call plug#end()
 
 " --------------------------------
@@ -57,4 +59,11 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+"Autocomplete - choose the sugestion"
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+"Rainbow
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 "Done
